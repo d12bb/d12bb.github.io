@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="/style.css">
+	<title>{% block title %}{{ config.title }}{% endblock %}</title>
+	<meta name="author" content="Benedikt Müller">
+	<meta name="license" content="http://creativecommons.org/licenses/by-sa/4.0/">
+	<link rel="index" href="/">
+	{% block extrahead %}{% endblock extrahead %}
+</head>
+<body>
+	<aside>
+		<a id="skip-nav" href="#main">Skip to content</a>
+		<header><h1>d12bb.dev</h1></header>
+		<nav>
+			<ul>
+				<li {% if current_path == "/" %}class="active"{% endif %}><a href="{{ config.base_url }}">Home</a></li>
+				{#<li {% if current_path == "/articles/" %}class="active"{% endif %}><a href="/articles">Articles</a></li>#}
+			</ul>
+		</nav>
+	</aside>
+	<main id="main">{% block content %}base.html{% endblock %}</main>
+	<footer>Copyright 2022 Benedikt Müller. Use under terms of <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>.</footer>
+</body>
+</html>
