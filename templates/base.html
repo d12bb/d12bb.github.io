@@ -13,7 +13,7 @@
 <body>
 	<aside>
 		<a id="skip-nav" href="#main">Skip to content</a>
-		<header><h1>d12bb.dev</h1></header>
+		<header><h1>{{ config.title }}</h1></header>
 		<nav>
 			<ul>
 				<li {% if current_path == "/" %}class="active"{% endif %}><a href="{{ config.base_url }}">Home</a></li>
