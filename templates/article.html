@@ -1,5 +1,6 @@
 {% extends "base.html" %}
 {% block title %}{{ page.title }} &mdash; {{ config.title }}{% endblock title %}
+{% block description %}{{ page.description }}{% endblock description %}
 {% block extrahead %}
 <meta name="date" content="{{ page.date }}">
 <link rel="up" title="Articles overview" href="/articles/">
@@ -7,7 +8,7 @@
 {% block content %}
 <article>
 	<h2>{{ page.title }}</h2>
-	<time>{{ page.date }}</time>
+	<time datetime="{{ page.date }}">{{ page.date }}</time>
 	{{ page.content |safe }}
 </article>
 {% endblock content %}
