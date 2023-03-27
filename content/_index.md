@@ -1,7 +1,7 @@
 +++
 +++
 
-Hi, I'm Benedikt, Notfallsanitäter and hobbyist computer enthusiast from Germany.
+Hi, I'm Benedikt, <span class="definition" title="German emergency medic; equivalent to paramedics in other countries">Notfallsanitäter</span> and hobbyist computer enthusiast from Germany.
 
 Find me on:
 
