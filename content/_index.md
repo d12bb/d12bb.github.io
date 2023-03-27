@@ -3,8 +3,6 @@
 
 Hi, I'm Benedikt, Notfallsanitäter and hobbyist computer enthusiast from Germany.
 
-I have a [GnuPG key](/d12bb.pub.asc).
-
 Find me on:
 
 * [Github](https://github.com/d12bb)
