@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="/style.css">
+	<title>Lessons learned doing Advent of Code one language a day &mdash; d12bb.dev</title>
+	<meta name="author" content="Benedikt Müller">
+	<meta name="license" content="http://creativecommons.org/licenses/by-sa/4.0/">
+	<meta name="description" content="I did Advent of Code 2022 using a different language each day. Here&#x27;s what I&#x27;ve learned.">
+	<link rel="index" href="/">
+	<link rel="alternate" type="application/atom+xml" title="RSS" href="https://d12bb.dev/articles/atom.xml">
+	
+<meta name="date" content="2023-03-27">
+<link rel="up" title="Articles overview" href="/articles/">
+
+</head>
+
+<body>
+	<aside>
+		<a id="skip-nav" href="#main">Skip to content</a>
+		<header><h1>d12bb.dev</h1></header>
+		<nav>
+			<ul>
+				<li ><a href="https:&#x2F;&#x2F;d12bb.dev">Home</a></li>
+				<li ><a href="/articles">Articles</a></li>
+			</ul>
+		</nav>
+	</aside>
+	<main id="main">
+<article>
+	<h2>Lessons learned doing Advent of Code one language a day</h2>
+	<time datetime="2023-03-27">2023-03-27</time>
+	<p>I've done little <a href="https://adventofcode.com">Advent of Code</a> over the past years, but last November, I decided to be more ambitious. Coming December, I'd do each exercise on the day it comes out where work permits, and little later if too busy. And to add to that already kinda hard challenge, I'd use a different language for every day of the challenge. Having no formal education in computer science, AoC is not exactly easy for me. I'm mostly self-taught, I don't know lots of algorithms, and I obviously don't have the experience of someone spending every working day solving challenges in actual production code.</p>
+<p>27 days later, I've <a href="https://github.com/d12bb/AdventOfCode/tree/main/2022">solved the whole thing</a> (ignoring day 17 part two, which I'll surely do <em>someday</em>…), being very proud of myself for actually accomplishing the goal of using 25 languages for 25 days, even finishing just two days late. So, what did I learn doing this challenge, and would I do it again? To answer the latter question first: no. More on that later.</p>
+<h3 id="languages"><a class="zola-anchor" href="#languages" aria-label="Anchor link for: languages">Languages</a></h3>
+<p>These are the languages I've used for each day, including a small remark:</p>
+<ol>
+<li><strong>Rust</strong>. I love this language!</li>
+<li><strong>Go</strong>. <code>if err != nil</code> and <code>switch</code>eroo…</li>
+<li><strong>Python</strong>. I use tabs, btw.</li>
+<li><strong>C</strong>. Took me a while, glad I got this over and done with.</li>
+<li><strong>Ruby</strong>. Long time since I last used this one.</li>
+<li><strong>Clojure</strong>. If only it wasn't built on Java…</li>
+<li><strong>Lua</strong>. Got lucky, no off-by-one errors today.</li>
+<li><strong>VimScript</strong>. Thank goodness there's Neovim with Fennel nowadays.</li>
+<li><strong>Zig</strong>. Interesting language, just see no use over Rust for me.</li>
+<li><strong>Fish</strong>. Really a more friendly shell.</li>
+<li><strong>Raku</strong> (Perl 6). <code>grammar</code> looks nice.</li>
+<li><strong>Swift</strong>. Kinda torn on this one.</li>
+<li><strong>Haskell</strong>. GHC warns when using tabs, just why?</li>
+<li><strong>Nim</strong>. Compiled and statically-typed Python: Nice. Not allowing tabs for indention: Not nice.</li>
+<li><strong>Elixir</strong> (and Rust). Got bit by linked lists today, part two would run for hours, probably trying to concat lists.</li>
+<li><strong>Crystal</strong>. Ruby, compiled.</li>
+<li><strong>Dart</strong>. Feels like C with modern types.</li>
+<li><strong>Racket</strong>. Try the rainbow, use a rainbow (plugin).</li>
+<li><strong>PHP</strong>. WTF.</li>
+<li><strong>D</strong>. A systems programming language with GC by default.</li>
+<li><strong>Pascal</strong>. Felt great using that again. I learned programming using Delphi back then.</li>
+<li><strong>Odin</strong>. Feels a lot like Go. Much nicer name though!</li>
+<li><strong>TypeScript</strong>. Better than JS. But it's still JS…</li>
+<li><strong>Julia</strong>. Bit minimal for my taste.</li>
+<li><strong>Objective C</strong>. Objective weirdness.</li>
+</ol>
+<h3 id="lessons-learned"><a class="zola-anchor" href="#lessons-learned" aria-label="Anchor link for: lessons-learned">Lessons learned</a></h3>
+<ul>
+<li>It takes time. A lot. Most of the languages I used, I’ve never touched before. So I had to make myself familiar with the most basic of its syntax and concepts before even starting to think about solving the day. I probably spent the same amount of time or more reading documentation as actually writing code or thinking about the problem at hand.</li>
+<li>It’s not easy. Easy days are still manageable, while hard days get even harder as concentration is split between thinking algorithms and trying to make an unfamiliar language do what I want.</li>
+<li>Tooling is everything. Having a good language server or other means of help while editing makes this a lot easier, as one can just try autocompleting stuff instead of having to look up absolutely everything in the documentation.</li>
+<li>Some languages are harder than others. There are multiple factors for that: Obviously, languages similar to ones I’m used with were easier than, for example, functional languages like Haskell. Also, to state the obvious, high-level languages are easier than low-level ones. I guess difficulty of language is a highly personal thing.</li>
+<li>Sometimes it doesn’t work. After waiting multiple hours waiting for my Elixir implementation of day 15 part 2 to finish and debugging the hell out of it, I rewrote it in Rust, copying the algorithm exactly. The Rust version finished in less than 650 ms, and I had not the slightest idea why it didn’t work in Elixir. Asking about it, I learned that the time-sink probably was concatenating linked lists, which requires traversing them to the end in absence of pointers to the last node.</li>
+<li>Order matters. Having used the language I know for the first few days, there were only unfamiliar ones left when exercises got mostly harder and harder. I should've used foreign languages first, saving familiar ones for harder stuff.</li>
+</ul>
+<h3 id="summary"><a class="zola-anchor" href="#summary" aria-label="Anchor link for: summary">Summary</a></h3>
+<p>I already stated above that I do not intend to do this again. The self-imposed pressure of doing each challenge the day it's released did take part of the fun out of it. I don't want to be stressed by something that's supposed to be fun. Additionally, while it indeed is great to peek into new languages, one day's exercise is neither sufficient to get a good impression nor does AoC being mostly about finding and using the right algorithm aid in learning. I still enjoy doing code challenges, and have already started catching up with older Advents. Maybe I'll use a new language for another year. But the most important part of doing all this for me is fun. Stay hungry, stay foolish, but most of all enjoy!</p>
+
+</article>
+</main>
+	<footer>Copyright 2023 Benedikt Müller. Use under terms of <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>.</footer>
+</body>
+
+</html>

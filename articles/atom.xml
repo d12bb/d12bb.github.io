@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+    <title>d12bb.dev - Articles</title>
+    <link href="https://d12bb.dev/articles/atom.xml" rel="self" type="application/atom+xml"/>
+    <link href="https://d12bb.dev/articles/"/>
+    <generator uri="https://www.getzola.org/">Zola</generator>
+    <updated>2023-03-27T00:00:00+00:00</updated>
+    <id>https://d12bb.dev/articles/atom.xml</id>
+    <entry xml:lang="en">
+        <title>Lessons learned doing Advent of Code one language a day</title>
+        <published>2023-03-27T00:00:00+00:00</published>
+        <updated>2023-03-27T00:00:00+00:00</updated>
+        <author>
+          <name>Unknown</name>
+        </author>
+        <link rel="alternate" href="https://d12bb.dev/articles/aoc-one-lang-per-day/" type="text/html"/>
+        <id>https://d12bb.dev/articles/aoc-one-lang-per-day/</id>
+        <content type="html">&lt;p&gt;I&#x27;ve done little &lt;a href=&quot;https:&#x2F;&#x2F;adventofcode.com&quot;&gt;Advent of Code&lt;&#x2F;a&gt; over the past years, but last November, I decided to be more ambitious. Coming December, I&#x27;d do each exercise on the day it comes out where work permits, and little later if too busy. And to add to that already kinda hard challenge, I&#x27;d use a different language for every day of the challenge. Having no formal education in computer science, AoC is not exactly easy for me. I&#x27;m mostly self-taught, I don&#x27;t know lots of algorithms, and I obviously don&#x27;t have the experience of someone spending every working day solving challenges in actual production code.&lt;&#x2F;p&gt;
+&lt;p&gt;27 days later, I&#x27;ve &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;d12bb&#x2F;AdventOfCode&#x2F;tree&#x2F;main&#x2F;2022&quot;&gt;solved the whole thing&lt;&#x2F;a&gt; (ignoring day 17 part two, which I&#x27;ll surely do &lt;em&gt;someday&lt;&#x2F;em&gt;…), being very proud of myself for actually accomplishing the goal of using 25 languages for 25 days, even finishing just two days late. So, what did I learn doing this challenge, and would I do it again? To answer the latter question first: no. More on that later.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;languages&quot;&gt;&lt;a class=&quot;zola-anchor&quot; href=&quot;#languages&quot; aria-label=&quot;Anchor link for: languages&quot;&gt;Languages&lt;&#x2F;a&gt;&lt;&#x2F;h3&gt;
+&lt;p&gt;These are the languages I&#x27;ve used for each day, including a small remark:&lt;&#x2F;p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;Rust&lt;&#x2F;strong&gt;. I love this language!&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Go&lt;&#x2F;strong&gt;. &lt;code&gt;if err != nil&lt;&#x2F;code&gt; and &lt;code&gt;switch&lt;&#x2F;code&gt;eroo…&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Python&lt;&#x2F;strong&gt;. I use tabs, btw.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;C&lt;&#x2F;strong&gt;. Took me a while, glad I got this over and done with.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Ruby&lt;&#x2F;strong&gt;. Long time since I last used this one.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Clojure&lt;&#x2F;strong&gt;. If only it wasn&#x27;t built on Java…&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Lua&lt;&#x2F;strong&gt;. Got lucky, no off-by-one errors today.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;VimScript&lt;&#x2F;strong&gt;. Thank goodness there&#x27;s Neovim with Fennel nowadays.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Zig&lt;&#x2F;strong&gt;. Interesting language, just see no use over Rust for me.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Fish&lt;&#x2F;strong&gt;. Really a more friendly shell.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Raku&lt;&#x2F;strong&gt; (Perl 6). &lt;code&gt;grammar&lt;&#x2F;code&gt; looks nice.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Swift&lt;&#x2F;strong&gt;. Kinda torn on this one.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Haskell&lt;&#x2F;strong&gt;. GHC warns when using tabs, just why?&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Nim&lt;&#x2F;strong&gt;. Compiled and statically-typed Python: Nice. Not allowing tabs for indention: Not nice.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Elixir&lt;&#x2F;strong&gt; (and Rust). Got bit by linked lists today, part two would run for hours, probably trying to concat lists.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Crystal&lt;&#x2F;strong&gt;. Ruby, compiled.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Dart&lt;&#x2F;strong&gt;. Feels like C with modern types.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Racket&lt;&#x2F;strong&gt;. Try the rainbow, use a rainbow (plugin).&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;PHP&lt;&#x2F;strong&gt;. WTF.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;D&lt;&#x2F;strong&gt;. A systems programming language with GC by default.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Pascal&lt;&#x2F;strong&gt;. Felt great using that again. I learned programming using Delphi back then.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Odin&lt;&#x2F;strong&gt;. Feels a lot like Go. Much nicer name though!&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;TypeScript&lt;&#x2F;strong&gt;. Better than JS. But it&#x27;s still JS…&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Julia&lt;&#x2F;strong&gt;. Bit minimal for my taste.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Objective C&lt;&#x2F;strong&gt;. Objective weirdness.&lt;&#x2F;li&gt;
+&lt;&#x2F;ol&gt;
+&lt;h3 id=&quot;lessons-learned&quot;&gt;&lt;a class=&quot;zola-anchor&quot; href=&quot;#lessons-learned&quot; aria-label=&quot;Anchor link for: lessons-learned&quot;&gt;Lessons learned&lt;&#x2F;a&gt;&lt;&#x2F;h3&gt;
+&lt;ul&gt;
+&lt;li&gt;It takes time. A lot. Most of the languages I used, I’ve never touched before. So I had to make myself familiar with the most basic of its syntax and concepts before even starting to think about solving the day. I probably spent the same amount of time or more reading documentation as actually writing code or thinking about the problem at hand.&lt;&#x2F;li&gt;
+&lt;li&gt;It’s not easy. Easy days are still manageable, while hard days get even harder as concentration is split between thinking algorithms and trying to make an unfamiliar language do what I want.&lt;&#x2F;li&gt;
+&lt;li&gt;Tooling is everything. Having a good language server or other means of help while editing makes this a lot easier, as one can just try autocompleting stuff instead of having to look up absolutely everything in the documentation.&lt;&#x2F;li&gt;
+&lt;li&gt;Some languages are harder than others. There are multiple factors for that: Obviously, languages similar to ones I’m used with were easier than, for example, functional languages like Haskell. Also, to state the obvious, high-level languages are easier than low-level ones. I guess difficulty of language is a highly personal thing.&lt;&#x2F;li&gt;
+&lt;li&gt;Sometimes it doesn’t work. After waiting multiple hours waiting for my Elixir implementation of day 15 part 2 to finish and debugging the hell out of it, I rewrote it in Rust, copying the algorithm exactly. The Rust version finished in less than 650 ms, and I had not the slightest idea why it didn’t work in Elixir. Asking about it, I learned that the time-sink probably was concatenating linked lists, which requires traversing them to the end in absence of pointers to the last node.&lt;&#x2F;li&gt;
+&lt;li&gt;Order matters. Having used the language I know for the first few days, there were only unfamiliar ones left when exercises got mostly harder and harder. I should&#x27;ve used foreign languages first, saving familiar ones for harder stuff.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h3 id=&quot;summary&quot;&gt;&lt;a class=&quot;zola-anchor&quot; href=&quot;#summary&quot; aria-label=&quot;Anchor link for: summary&quot;&gt;Summary&lt;&#x2F;a&gt;&lt;&#x2F;h3&gt;
+&lt;p&gt;I already stated above that I do not intend to do this again. The self-imposed pressure of doing each challenge the day it&#x27;s released did take part of the fun out of it. I don&#x27;t want to be stressed by something that&#x27;s supposed to be fun. Additionally, while it indeed is great to peek into new languages, one day&#x27;s exercise is neither sufficient to get a good impression nor does AoC being mostly about finding and using the right algorithm aid in learning. I still enjoy doing code challenges, and have already started catching up with older Advents. Maybe I&#x27;ll use a new language for another year. But the most important part of doing all this for me is fun. Stay hungry, stay foolish, but most of all enjoy!&lt;&#x2F;p&gt;
+</content>
+    </entry>
+</feed>
